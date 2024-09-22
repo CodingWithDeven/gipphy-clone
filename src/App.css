@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gradient {
+    @apply bg-gradient-to-r from-teal-600 via-blue-600 to-pink-600;
+  }
+  .faded-text {
+    @apply font-bold text-sm text-gray-400;
+  }
+  .divider {
+    @apply w-full h-0.5 my-6 bg-gray-800;
+  }
+}
+/* CSS */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flap {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-fly {
+  animation: flap 0.5s infinite;
+}
+
+
+
+/* Component */
+.heart-icon {
+  z-index: 1;
+}
+
+.animate-pulse {
+  animation: pulse 0.5s infinite;
+}
+
+/* In your CSS file */
+.embed-button-hover .code-icon {
+  animation: bracket-animation 0.5s infinite alternate;
+}
+
+@keyframes bracket-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+
